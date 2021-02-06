@@ -3,11 +3,12 @@ package com.techpro.Homeworks;
 import com.techpro.Pages.AutomationPracticeContactPage;
 import com.techpro.Pages.AutomationPracticeMainPage;
 import com.techpro.utilities.Driver;
+import com.techpro.utilities.TestBaseFinal;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class AutomationPractice {
+public class AutomationPractice  extends TestBaseFinal {
 
  AutomationPracticeMainPage mainPage = new AutomationPracticeMainPage();
  AutomationPracticeContactPage contactPage= new AutomationPracticeContactPage();
@@ -26,12 +27,7 @@ public class AutomationPractice {
         String path=  "C:\\Users\\User\\Desktop\\flower.jpg";
         contactPage.fileUpload.sendKeys(path);
         contactPage.sendButton.click();
-        Assert.assertTrue(contactPage.successMessage.getText().contains("successfully"));
-
-
-
-
-
+        Assert.assertFalse(contactPage.successMessage.getText().contains("successfully"));
 
 
 
