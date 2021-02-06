@@ -1,0 +1,7 @@
+
+<!--
+We are able to run test in parallel or in multbrower mode using testng.xml files
+We are doinig different configuration to exexute out test scenarios
+TestNG.xml files help us to run multiple methods, classes , test to run in organized way
+For
+ -->

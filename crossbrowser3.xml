@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="crossbrowsertest" verbose="2" >
+    <test name="firefox browser"   >
+        <parameter name="browser" value="firefox"></parameter>
+        <packages>
+            <package name="com.techpro.crossbrowsertest" />
+        </packages>
+    </test>
+    <test name="chrome browser"   >
+        <parameter name="browser" value="chrome"></parameter>
+        <packages>
+            <package name="com.techpro.crossbrowsertest" />
+        </packages>
+    </test>
+
+
+
+</suite>
+        <!--
+        This is the real action take place. WE are running multi browser testing from this file.Just right click on the file
+        and choose run option.
+         -->

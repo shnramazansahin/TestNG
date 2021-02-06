@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="crossbrowsertest" verbose="2" >
+    <test name="cross browser"   >
+        <parameter name="browser" value="firefox"></parameter>
+        <packages>
+            <package name="com.techpro.crossbrowsertest" />
+        </packages>
+    </test>
+</suite>
+        <!--
+        verbose means in how many browser you wanna open/ or run
+        parmater comes from testbasecross and whatever the value of the parameter in that class, we use
+        the same name for "name" and chose which browser we wanna use and type it in "value"
+
+
+        -->

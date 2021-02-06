@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Smoke Test Suite" verbose="2" >
+    <test name="smoke test"   >
+        <packages>
+            <package name="com.techpro.SmokeTest" />
+            <package name="com.techpro.ExcelAutomotion"></package>
+        </packages>
+    </test>
+</suite>

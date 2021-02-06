@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="run methods" parallel="methods" thread-count="2">
+    <test name="parallel1">
+        <classes>
+            <class name="com.techpro.tests.Day13_02FaceLogin"></class>
+            <class name="com.techpro.tests.Day08Windows"></class>
+        </classes>
+    </test>
+</suite>
