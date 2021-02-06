@@ -8,7 +8,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-public class Day_24JSExecuter {
+public class Day24_01JSExecuter {
 //
 //@Test
 //    public void jsExecutorTest(){
@@ -51,11 +51,17 @@ public class Day_24JSExecuter {
         JSUtils.scrollIntoVIewJS(element2); // same with the one above. this one comes from JSutil class in utilities
 
 
+    }
+    @Test
+    public  void JSexecutor3() {
+
+        Driver.getDriver().get("https://qa-environment.crystalkeyhotels.com/Account/Logon");
+       WebElement loginButton= Driver.getDriver().findElement(By.id("btnSubmit"));
+       JSUtils.changeColor("black",loginButton);
+
 
 
 
     }
-
-
 
 }

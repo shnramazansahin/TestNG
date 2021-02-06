@@ -41,5 +41,13 @@ public class JSUtils {
         javascriptExecutor.executeScript("alert('" + message + "')");
         Thread.sleep(3000);
     }
+// flashing the background color
+    public static   void flash(WebElement element) {
+        String bgColor = element.getCssValue("backgroundcolor");
+        for (int i = 0; i < 10; i++) {
+            changeColor("rgb(0,200,0", element);
+            changeColor(bgColor, element);
+        }
+    }
 
 }
