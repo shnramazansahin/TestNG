@@ -1,5 +1,6 @@
 package com.techpro.tests;
 
+import com.techpro.utilities.ConfigReader;
 import com.techpro.utilities.Driver;
 import com.techpro.utilities.JSUtils;
 import com.techpro.utilities.ReusableMethods;
@@ -9,21 +10,27 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 public class Day24_01JSExecuter {
-//
-//@Test
-//    public void jsExecutorTest(){
-//
-//    Driver.getDriver().get(ConfigReader.getProperty("qa_environment"));
-//    WebElement element1 =Driver.getDriver().findElement(By.xpath("(//h2)[10]"));
-//    System.out.println(element1.isDisplayed()); // return false bc we must scoll down the page
-//    ReusableMethods.waitFor(1);
-//    JavascriptExecutor je= (JavascriptExecutor) Driver.getDriver();
-//    je.executeScript("arguments[0].scrollIntoView(true);",element1); // this scroll down the page until Selenium can see the element1
-//
-//
-//
-//
-//    }
+/*
+In this class, we learn how to scoll down with javascript executor. We hava actions class for it, but JSE is better bc websites are written with JS.
+To use, JSE we have to follow these steps:
+    1.Find the element you wanna see. F.I.; WebElement element1 =Driver.getDriver().findElement(By.xpath("(//h2)[10]"));
+    2.Initilaze the JavascriptExecutor; JavascriptExecutor je= (JavascriptExecutor) Driver.getDriver();
+    2.je.executeScript("arguments[0].scrollIntoView(true);",element1);
+ */
+@Test
+    public void jsExecutorTest(){
+
+    Driver.getDriver().get(ConfigReader.getProperty("qa_environment"));
+    WebElement element1 =Driver.getDriver().findElement(By.xpath("(//h2)[10]"));
+    System.out.println(element1.isDisplayed()); // return false bc we must scoll down the page
+    ReusableMethods.waitFor(1);
+    JavascriptExecutor je= (JavascriptExecutor) Driver.getDriver();
+    je.executeScript("arguments[0].scrollIntoView(true);",element1); // this scroll down the page until Selenium can see the element1
+
+
+
+
+    }
 
     @Test
     public  void JSESexetor() {
