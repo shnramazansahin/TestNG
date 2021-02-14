@@ -15,7 +15,7 @@ In this class, we learn how to scoll down with javascript executor. We hava acti
 To use, JSE we have to follow these steps:
     1.Find the element you wanna see. F.I.; WebElement element1 =Driver.getDriver().findElement(By.xpath("(//h2)[10]"));
     2.Initilaze the JavascriptExecutor; JavascriptExecutor je= (JavascriptExecutor) Driver.getDriver();
-    2.je.executeScript("arguments[0].scrollIntoView(true);",element1);
+    3.je.executeScript("arguments[0].scrollIntoView(true);",element1);
  */
 @Test
     public void jsExecutorTest(){
